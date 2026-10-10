@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ruleta CorrentinApp</title>
+
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <h1>🎡 CorrentinApp</h1>
+        <h2>Descubriendo nuestra provincia</h2>
+
+        <p class="subtitulo">
+            Geografía • Producción • Naturaleza
+        </p>
+
+        <!-- PUNTAJE -->
+        <section class="marcador">
+            <span>⭐ Puntaje: <strong id="puntaje">0</strong></span>
+            <span>🎯 Preguntas: <strong id="contador">0</strong></span>
+        </section>
+
+        <!-- RULETA -->
+        <section class="zona-ruleta">
+
+            <div class="flecha">▼</div>
+
+            <div id="ruleta" class="ruleta">
+
+                <div class="centro">
+                    CORRIENTES
+                </div>
+
+            </div>
+
+        </section>
+
+        <button id="botonGirar" class="boton-girar">
+            🎡 GIRAR RULETA
+        </button>
+
+        <!-- TARJETA DE PREGUNTA -->
+        <section id="tarjetaPregunta" class="tarjeta oculto">
+
+            <span id="categoria" class="categoria"></span>
+
+            <h3 id="tema"></h3>
+
+            <p id="pregunta"></p>
+
+            <div id="opciones" class="opciones">
+            </div>
+
+            <p id="resultado" class="resultado"></p>
+
+        </section>
+
+        <footer>
+            Laboratorio de Aplicaciones II • 2026
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
