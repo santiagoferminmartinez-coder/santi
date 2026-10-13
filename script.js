@@ -11,74 +11,74 @@
 const preguntas = [
 
     {
-        categoria: "Producción",
-        tema: "Yerba Mate",
+        categoria: "Geografía Física y Relieve",
+        tema: "Las Montañas Más Altas",
 
         pregunta:
-        "¿Qué producto tradicional se obtiene de la planta Ilex paraguariensis?",
+        "¿Cuál es la montaña más alta del mundo sobre el nivel del mar??",
 
         opciones: [
-            "Yerba mate",
-            "Arroz",
-            "Algodón",
-            "Trigo"
+            "1) K2",
+            "2) Monte Everest",
+            "3) Kangchenjunga",
+            "4) Aconcagua"
         ],
 
-        correcta: 0
+        correcta: 2
     },
 
 
     {
-        categoria: "Producción",
-        tema: "Arroz",
+        categoria: "Hidrografía (Ríos, Lagos y Océanos)",
+        tema: "Los Ríos Más Largos",
 
         pregunta:
-        "¿Qué condición favorece especialmente el cultivo de arroz?",
+        "¿Cuál es el río más caudaloso y largo del mundo?",
 
         opciones: [
-            "La disponibilidad de agua",
-            "Las grandes nevadas",
-            "El clima desértico",
-            "Los suelos congelados"
+            "1) Río Nilo",
+            "2) Río Misisipi",
+            "3) Río Amazonas ",
+            "3) Río Yangtze"
         ],
 
-        correcta: 0
+        correcta: 3
     },
 
 
     {
-        categoria: "Naturaleza",
-        tema: "Esteros del Iberá",
+        categoria: "Geografía Política y Capitales",
+        tema: "Capitales de Europa",
 
         pregunta:
-        "¿Qué tipo de ambiente caracteriza principalmente a los Esteros del Iberá?",
+        "¿Cuál es la capital de Australia?",
 
         opciones: [
-            "Humedales",
-            "Desiertos",
-            "Alta montaña",
-            "Glaciares"
+            "1) Brisbane"
+            "2) Canberra",
+            "3) Melbourne",
+            "4) Sídney"
         ],
 
-        correcta: 0
+        correcta: 2
     },
 
 
     {
-        categoria: "Geografía",
-        tema: "Río Paraná",
+        categoria: "Clima y Meteorología",
+        tema: "Zonas Climáticas",
 
         pregunta:
-        "¿Qué importante río limita parte del territorio correntino?",
+        "¿Qué línea imaginaria marca el límite del área donde el sol puede estar directamente en el cenit a mediodía?",
 
         opciones: [
-            "Río Paraná",
-            "Río Colorado",
-            "Río Negro",
-            "Río Chubut"
+            "1) Línea del Ecuador únicamente",
+            "2) Trópico de Cáncer y Trópico de Capricornio",
+            "3) Meridiano de Greenwich",
+            "4) Círculo Polar Ártico"
         ],
 
-        correcta: 0
+        correcta: 2
     },
 
 
