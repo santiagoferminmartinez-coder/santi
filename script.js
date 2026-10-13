@@ -1,3 +1,12 @@
+// =====================================================
+// RULETA EDUCATIVA - CORRENTINAPP
+// Laboratorio de Aplicaciones II
+// =====================================================
+
+
+// -----------------------------------------------------
+// 1. BANCO DE PREGUNTAS
+// -----------------------------------------------------
 
 const preguntas = [
 
@@ -6,7 +15,7 @@ const preguntas = [
         tema: "Las Montañas Más Altas",
 
         pregunta:
-        "¿Cuál es la montaña más alta del mundo sobre el nivel del mar??",
+        "¿Cuál es la montaña más alta del mundo sobre el nivel del mar?",
 
         opciones: [
             "1) K2",
@@ -15,7 +24,7 @@ const preguntas = [
             "4) Aconcagua"
         ],
 
-        correcta: 2
+        correcta: 1
     },
 
 
@@ -29,11 +38,11 @@ const preguntas = [
         opciones: [
             "1) Río Nilo",
             "2) Río Misisipi",
-            "3) Río Amazonas ",
-            "3) Río Yangtze"
+            "3) Río Amazonas",
+            "4) Río Yangtze"
         ],
 
-        correcta: 3
+        correcta: 2
     },
 
 
@@ -45,13 +54,13 @@ const preguntas = [
         "¿Cuál es la capital de Australia?",
 
         opciones: [
-            "1) Brisbane"
+            "1) Brisbane",
             "2) Canberra",
             "3) Melbourne",
             "4) Sídney"
         ],
 
-        correcta: 2
+        correcta: 1
     },
 
 
@@ -69,7 +78,7 @@ const preguntas = [
             "4) Círculo Polar Ártico"
         ],
 
-        correcta: 2
+        correcta: 1
     },
 
 
@@ -111,9 +120,9 @@ const preguntas = [
 ];
 
 
-/ -----------------------------------------------------
-/ 2. VARIABLES
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 2. VARIABLES
+// -----------------------------------------------------
 
 let puntaje = 0;
 
@@ -124,9 +133,9 @@ let preguntaActual = null;
 let rotacionActual = 0;
 
 
-/ -----------------------------------------------------
-/ 3. OBTENER ELEMENTOS DEL HTML
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 3. OBTENER ELEMENTOS DEL HTML
+// -----------------------------------------------------
 
 const ruleta =
     document.getElementById("ruleta");
@@ -159,16 +168,16 @@ const contador =
     document.getElementById("contador");
 
 
-/ -----------------------------------------------------
-/ 4. EVENTO DEL BOTÓN
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 4. EVENTO DEL BOTÓN
+// -----------------------------------------------------
 
 botonGirar.addEventListener("click", girarRuleta);
 
 
-/ -----------------------------------------------------
-/ 5. FUNCIÓN GIRAR RULETA
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 5. FUNCIÓN GIRAR RULETA
+// -----------------------------------------------------
 
 function girarRuleta() {
 
@@ -179,25 +188,25 @@ function girarRuleta() {
     resultado.textContent = "";
 
 
-    / Generamos grados aleatorios
+    // Generamos grados aleatorios
 
     const gradosAleatorios =
         Math.floor(Math.random() * 360);
 
 
-    / Agregamos varias vueltas completas
+    // Agregamos varias vueltas completas
 
     rotacionActual +=
         1440 + gradosAleatorios;
 
 
-    / Giramos la ruleta
+    // Giramos la ruleta
 
     ruleta.style.transform =
         `rotate(${rotacionActual}deg)`;
 
 
-    / Esperamos que termine la animación
+    // Esperamos que termine la animación
 
     setTimeout(function() {
 
@@ -210,9 +219,9 @@ function girarRuleta() {
 }
 
 
-/ -----------------------------------------------------
-/ 6. SELECCIONAR PREGUNTA ALEATORIA
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 6. SELECCIONAR PREGUNTA ALEATORIA
+// -----------------------------------------------------
 
 function seleccionarPregunta() {
 
@@ -229,9 +238,9 @@ function seleccionarPregunta() {
 }
 
 
-/ -----------------------------------------------------
-/ 7. MOSTRAR LA PREGUNTA
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 7. MOSTRAR LA PREGUNTA
+// -----------------------------------------------------
 
 function mostrarPregunta() {
 
@@ -250,12 +259,12 @@ function mostrarPregunta() {
         preguntaActual.pregunta;
 
 
-    / Limpiamos opciones anteriores
+    // Limpiamos opciones anteriores
 
     opciones.innerHTML = "";
 
 
-    / Creamos los botones
+    // Creamos los botones
 
     preguntaActual.opciones.forEach(
         function(opcion, indice) {
@@ -289,9 +298,9 @@ function mostrarPregunta() {
 }
 
 
-/ -----------------------------------------------------
-/ 8. COMPROBAR RESPUESTA
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 8. COMPROBAR RESPUESTA
+// -----------------------------------------------------
 
 function comprobarRespuesta(indiceSeleccionado) {
 
@@ -321,7 +330,7 @@ function comprobarRespuesta(indiceSeleccionado) {
     actualizarMarcador();
 
 
-    / Evitamos responder varias veces
+    // Evitamos responder varias veces
 
     const botones =
         document.querySelectorAll(".opcion");
@@ -338,9 +347,9 @@ function comprobarRespuesta(indiceSeleccionado) {
 }
 
 
-/ -----------------------------------------------------
-/ 9. ACTUALIZAR MARCADOR
-/ -----------------------------------------------------
+// -----------------------------------------------------
+// 9. ACTUALIZAR MARCADOR
+// -----------------------------------------------------
 
 function actualizarMarcador() {
 
