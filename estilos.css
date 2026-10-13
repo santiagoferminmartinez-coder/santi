@@ -1,282 +1,72 @@
-* {
-    box-sizing: border-box;
-}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+    <title>Ruleta CorrentinApp</title>
 
-    background:
-        linear-gradient(135deg, #071952, #0B666A, #35A29F);
+    <link rel="stylesheet" href="estilos.css">
+</head>
 
-    min-height: 100vh;
+<body>
 
-    color: white;
-}
+    <main class="contenedor">
 
-/* CONTENEDOR PRINCIPAL */
+        <h1>🎡 CorrentinApp</h1>
+        <h2>Descubriendo nuestra provincia</h2>
 
-.contenedor {
-    width: 90%;
-    max-width: 900px;
+        <p class="subtitulo">
+            Geografía • Producción • Naturaleza
+        </p>
 
-    margin: auto;
-    padding: 30px;
+        <!-- PUNTAJE -->
+        <section class="marcador">
+            <span>⭐ Puntaje: <strong id="puntaje">0</strong></span>
+            <span>🎯 Preguntas: <strong id="contador">0</strong></span>
+        </section>
 
-    text-align: center;
-}
+        <!-- RULETA -->
+        <section class="zona-ruleta">
 
-h1 {
-    font-size: 45px;
-    margin-bottom: 5px;
-}
+            <div class="flecha">▼</div>
 
-h2 {
-    margin-top: 0;
-}
+            <div id="ruleta" class="ruleta">
 
-.subtitulo {
-    color: #97FEED;
-}
+                <div class="centro">
+                    CORRIENTES
+                </div>
 
+            </div>
 
-/* MARCADOR */
+        </section>
 
-.marcador {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+        <button id="botonGirar" class="boton-girar">
+            🎡 GIRAR RULETA
+        </button>
 
-    background: rgba(255,255,255,0.12);
+        <!-- TARJETA DE PREGUNTA -->
+        <section id="tarjetaPregunta" class="tarjeta oculto">
 
-    padding: 15px;
-    border-radius: 15px;
+            <span id="categoria" class="categoria"></span>
 
-    margin: 25px 0;
-}
+            <h3 id="tema"></h3>
 
+            <p id="pregunta"></p>
 
-/* ZONA RULETA */
+            <div id="opciones" class="opciones">
+            </div>
 
-.zona-ruleta {
-    position: relative;
+            <p id="resultado" class="resultado"></p>
 
-    width: 330px;
-    height: 350px;
+        </section>
 
-    margin: auto;
-}
+        <footer>
+            Laboratorio de Aplicaciones II • 2026
+        </footer>
 
+    </main>
 
-/* FLECHA */
+    <script src="script.js"></script>
 
-.flecha {
-    position: absolute;
-
-    top: -5px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    font-size: 45px;
-
-    color: yellow;
-
-    z-index: 10;
-}
-
-
-/* RULETA */
-
-.ruleta {
-    width: 320px;
-    height: 320px;
-
-    border-radius: 50%;
-
-    border: 8px solid white;
-
-    position: absolute;
-    bottom: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    background:
-
-        conic-gradient(
-            #ff595e 0deg 60deg,
-            #ffca3a 60deg 120deg,
-            #8ac926 120deg 180deg,
-            #1982c4 180deg 240deg,
-            #6a4c93 240deg 300deg,
-            #ff924c 300deg 360deg
-        );
-
-    box-shadow: 0 0 30px rgba(255,255,255,0.4);
-
-    transition: transform 4s cubic-bezier(.17,.67,.12,.99);
-}
-
-
-/* CENTRO DE LA RULETA */
-
-.centro {
-    width: 120px;
-    height: 120px;
-
-    background: #071952;
-
-    border: 6px solid white;
-
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-weight: bold;
-
-    font-size: 14px;
-
-    box-shadow: 0 0 15px black;
-}
-
-
-/* BOTÓN GIRAR */
-
-.boton-girar {
-
-    background: #00ffcc;
-
-    border: none;
-
-    padding: 15px 35px;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    border-radius: 30px;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.boton-girar:hover {
-
-    transform: scale(1.08);
-
-    box-shadow: 0 0 20px #00ffcc;
-}
-
-
-/* TARJETA */
-
-.tarjeta {
-
-    background: white;
-
-    color: #222;
-
-    margin: 35px auto;
-
-    padding: 25px;
-
-    border-radius: 20px;
-
-    max-width: 650px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-
-/* CATEGORÍA */
-
-.categoria {
-
-    display: inline-block;
-
-    background: #071952;
-
-    color: white;
-
-    padding: 7px 18px;
-
-    border-radius: 20px;
-
-    font-size: 14px;
-}
-
-
-/* OPCIONES */
-
-.opciones {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 12px;
-
-    margin-top: 20px;
-}
-
-
-.opcion {
-
-    border: none;
-
-    padding: 15px;
-
-    border-radius: 10px;
-
-    background: #e8f8f5;
-
-    cursor: pointer;
-
-    font-size: 16px;
-
-    transition: 0.2s;
-}
-
-
-.opcion:hover {
-
-    background: #97FEED;
-
-    transform: scale(1.03);
-}
-
-
-/* RESULTADO */
-
-.resultado {
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    min-height: 25px;
-}
-
-
-/* OCULTAR */
-
-.oculto {
-    display: none;
-}
-
-
-/* FOOTER */
-
-footer {
-
-    margin-top: 40px;
-
-    opacity: 0.7;
-
-    font-size: 14px;
-}
+</body>
+</html>
