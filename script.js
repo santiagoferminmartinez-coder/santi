@@ -83,20 +83,20 @@ const preguntas = [
 
 
     {
-        categoria: "Producción",
-        tema: "Cítricos",
+        categoria: "Clima y Meteorología",
+        tema: "Zonas Climáticas",
 
         pregunta:
-        "¿Cuál de estos productos pertenece a la producción citrícola?",
+        "¿Qué línea imaginaria marca el límite del área donde el sol puede estar directamente en el cenit a mediodía?",
 
         opciones: [
-            "Naranja",
-            "Trigo",
-            "Soja",
-            "Girasol"
+            "1) Círculo Polar Ártico",
+            "3) Trópico de Cáncer y Trópico de Capricornio",
+            "2) Meridiano de Greenwich",
+            "4) Línea del Ecuador únicamente"
         ],
 
-        correcta: 0
+        correcta: 3
     },
 
 
